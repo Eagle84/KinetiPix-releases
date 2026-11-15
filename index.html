@@ -3,13 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KinetiPix — Bring your photos to life</title>
-<meta name="description" content="KinetiPix brings printed photos to life with augmented reality. Works fully offline on Android.">
+<title>KinetiPix — Bring your printed photos to life</title>
+<meta name="description" content="Point your phone at a printed photo and watch it come to life in augmented reality. KinetiPix works fully offline: no account, no ads, no tracking.">
+<meta property="og:title" content="KinetiPix — Bring your printed photos to life">
+<meta property="og:description" content="Point your phone at a printed photo and watch it move, right on the print. Works fully offline.">
+<meta property="og:image" content="https://kinetipix.echlonlabs.com/assets/feature-graphic-1024x500.png">
+<meta property="og:url" content="https://kinetipix.echlonlabs.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#101418">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/logo-192.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Kineti<span>Pix</span></h1>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32"><span class="wordmark">Kineti<span>Pix</span></span></a>
 </header>
 <nav>
   <a href="index.html" class="active">Home</a>
@@ -17,26 +25,160 @@
   <a href="support.html">Support</a>
   <a href="delete-data.html">Delete Your Data</a>
 </nav>
-<main>
-  <h1>Bring your photos to life</h1>
-  <p>Point your phone at a printed photo and watch it move. KinetiPix recognizes the picture with augmented reality and plays a looping animation right on top of it.</p>
 
-  <div class="card">
-    <ul>
-      <li><strong>Works offline.</strong> No internet connection, no account, no tracking.</li>
-      <li><strong>Private by design.</strong> Your camera feed and photos never leave your phone.</li>
-      <li><strong>Add your own photos.</strong> Choose a picture from your gallery or snap a print.</li>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Augmented reality for your prints</p>
+    <h1>Your photos, <em>alive</em>.</h1>
+    <p class="lead">Point your phone at a printed photo and watch it move, right on the print. The animation stays pinned to the picture as you walk around it.</p>
+    <div class="cta-row">
+      <span class="badge-soon">Coming soon to Google Play</span>
+      <a class="btn-ghost" href="#how">See how it works</a>
+    </div>
+    <ul class="hero-points">
+      <li>Works fully offline</li>
+      <li>No account, no ads, no tracking</li>
+      <li>Add your own photos</li>
     </ul>
   </div>
 
-  <h2>Requirements</h2>
-  <p>An Android 9 (or newer) phone that supports <a href="https://developers.google.com/ar/devices" rel="noopener">Google Play Services for AR</a>.</p>
+  <!-- Mockup of the app's AR screen at the moment a print locks on. -->
+  <div class="phone" aria-label="KinetiPix app showing an animated photo locked onto a print">
+    <div class="screen scene">
+      <div class="statusbar"><span>9:41</span><span>●●●</span></div>
+      <div class="topbar">
+        <span class="chip-mark">KinetiPix</span>
+        <span class="fab" aria-hidden="true">🔇</span>
+      </div>
+      <div class="print locked">
+        <img src="assets/print.jpg" alt="">
+        <span class="shimmer"></span>
+      </div>
+      <div class="controls">
+        <div class="speed"><span>Speed</span><b class="lock">0.5x</b><b class="on">1x</b><b class="lock">2x</b></div>
+        <div class="carousel">
+          <i class="tile add">+</i>
+          <i class="tile sel" style="background-image:url(assets/print.jpg)"></i>
+          <i class="tile" style="background-image:url(assets/print.jpg)"><b class="soon">soon</b></i>
+          <i class="tile locked-tile"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h2>Availability</h2>
-  <p class="muted">Coming soon to Google Play.</p>
-</main>
+<section id="how" class="band">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="phone small">
+        <div class="screen scene">
+          <div class="reticle"></div>
+          <span class="hint">Searching for photo…</span>
+        </div>
+      </div>
+      <h3>1. Point</h3>
+      <p>Open KinetiPix and aim at a photo from your library. Live hints tell you to hold steady, move closer or find more light.</p>
+    </div>
+    <div class="step">
+      <div class="phone small">
+        <div class="screen scene">
+          <div class="print locked mini"><img src="assets/print.jpg" alt=""></div>
+          <span class="hint ok">Locked</span>
+        </div>
+      </div>
+      <h3>2. Lock on</h3>
+      <p>A gentle vibration confirms the lock. ARCore measures the print so the animation sits exactly on it.</p>
+    </div>
+    <div class="step">
+      <div class="phone small">
+        <div class="screen scene">
+          <div class="print locked mini moving"><img src="assets/print.jpg" alt=""><span class="shimmer"></span></div>
+        </div>
+      </div>
+      <h3>3. Watch it move</h3>
+      <p>The photo comes alive in a seamless loop. Walk around it: the animation stays pinned to the print.</p>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="phone">
+    <div class="screen crop">
+      <div class="crop-stage">
+        <img src="assets/print.jpg" alt="">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="8,6 92,10 90,94 6,90"></polygon>
+          <circle cx="8" cy="6" r="2.6"></circle><circle cx="92" cy="10" r="2.6"></circle>
+          <circle cx="90" cy="94" r="2.6"></circle><circle cx="6" cy="90" r="2.6"></circle>
+        </svg>
+      </div>
+      <div class="crop-form">
+        <span class="field">Grandma's garden</span>
+        <div class="crop-buttons"><span class="b2">Cancel</span><span class="b1">Save</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="split-copy">
+    <p class="eyebrow">Add your own photos</p>
+    <h2>Snap a print. Straighten it. Done.</h2>
+    <p>Choose a picture from your gallery or photograph the print on your wall. Drag four corners onto its edges and KinetiPix straightens it, checks it has enough detail to track, and adds it to your library.</p>
+    <ul class="ticks">
+      <li>Works with framed, angled or older prints</li>
+      <li>Name, rename or remove photos any time</li>
+      <li>Everything stays on your phone</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="privacy">
+    <p class="eyebrow">Private by design</p>
+    <h2>It doesn't even ask for the internet.</h2>
+    <p>KinetiPix has no internet permission. Your camera feed and photos are processed on your phone and never leave it. No account, no analytics, no ads. Animations are encrypted on your device with a key held in its secure hardware.</p>
+    <a href="privacy-policy.html">Read the privacy policy →</a>
+  </div>
+</section>
+
+<section class="pricing">
+  <h2>Free or Premium</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>KinetiPix</h3>
+      <p class="price">Free</p>
+      <ul>
+        <li>Living photos in AR</li>
+        <li>Add your own photos</li>
+        <li>2.5-second seamless loops</li>
+        <li>Normal speed</li>
+        <li class="muted">Small watermark</li>
+      </ul>
+    </div>
+    <div class="plan featured">
+      <h3>KinetiPix Premium</h3>
+      <p class="price">One-time purchase</p>
+      <ul>
+        <li>Everything in Free</li>
+        <li>Slow motion (0.5x) and 2x speed</li>
+        <li>Custom loop length</li>
+        <li>Premium animation loops</li>
+        <li>No watermark</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Questions</h2>
+  <details><summary>Which phones are supported?</summary><p>Android 9 or newer phones that support <a href="https://developers.google.com/ar/devices" rel="noopener">Google Play Services for AR</a>.</p></details>
+  <details><summary>Does it work without internet?</summary><p>Yes, completely. KinetiPix does not request internet access at all.</p></details>
+  <details><summary>Why isn't my photo recognized?</summary><p>Only photos in your KinetiPix library come to life, so add it first. Then move the phone slowly for a second so the app can measure the print. Very plain photos have too little detail to track. More tips on the <a href="support.html">support page</a>.</p></details>
+  <details><summary>Where are my photos stored?</summary><p>Only on your phone, in the app's private storage. You can delete them in the app, or clear everything by uninstalling. See <a href="delete-data.html">Delete Your Data</a>.</p></details>
+</section>
+
 <footer>
-  KinetiPix is an Echlon Labs project. ARCore and Google Play are trademarks of Google LLC.
+  <p><a href="mailto:kinetipix@echlonlabs.com">kinetipix@echlonlabs.com</a> · <a href="privacy-policy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="https://echlonlabs.com">Echlon Labs</a></p>
+  <p>KinetiPix is an Echlon Labs project. ARCore and Google Play are trademarks of Google LLC.</p>
 </footer>
 </body>
 </html>

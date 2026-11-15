@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="KinetiPix">
+  <rect x="0" y="0" width="108" height="108" rx="24" fill="#101418"/>
+  <g transform="translate(54 54) scale(1.65) translate(-54 -54.6)" fill="none" stroke="#ffb547" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="36" y="38" width="36" height="32" rx="2"/>
+    <path d="M42,62 Q50,44 58,54 T68,46"/>
+    <circle cx="66" cy="45" r="3" fill="#ffb547" stroke="none"/>
+  </g>
+</svg>
