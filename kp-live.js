@@ -10,7 +10,7 @@
     print.classList.add('kp-live');
 
     var css = ''
-    + '.kp-live{position:relative;overflow:hidden}'
+    + '.kp-live{position:relative;overflow:hidden;width:100%;aspect-ratio:3/4}'
     + '.kp-live img,.kp-live .shimmer{display:none !important}'
     + '.kp-live .kp-wrap{position:absolute;inset:0;border-radius:inherit;overflow:hidden;background:#0b0f14}'
     + '.kp-live svg{display:block;width:100%;height:100%}'
